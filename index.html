@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="./styles.css" />
     <title>PIXL</title>
 </head>
-<body class=" bg-pixl-dark text-pixl-light h-dvh w-full overflow-clip relative">
+<body class=" bg-pixl-dark text-pixl-light h-dvh w-full sm:overflow-clip relative flex flex-col sm:block">
     <!-- Background image -->
-    <div class="absolute inset-0 overflow-clip">
+    <div class="fixed inset-0 overflow-clip">
         <img 
             src="/images/Official-Login-BG.png" 
             alt=""
-            class="absolute inset-y-0 left-[15%] h-full w-full object-cover opacity-30 mask-l-from-20%"
+            class="fixed inset-y-0 left-[15%] h-full w-full object-cover opacity-30 mask-l-from-20%"
         />
     </div>
 
-    <main class="grid place-items-center h-full isolate max-w-[1000px] mx-auto">
-        <div class="flex gap-16 items-center justify-between w-full">
-            <!-- left panel -->
+    <main class="grid place-items-center sm:h-full isolate max-w-[1000px] xl:max-w-6xl mx-auto px-12 max-md:pt-16 grow">
+        <div class="flex flex-col sm:flex-row gap-8 sm:gap-16 items-center justify-between w-full">
+            <!-- Logo + Word Stack -->
             <div>
                 <div class="flex gap-3 items-baseline">
                     <svg class="w-36" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 182 61" fill="none">
@@ -57,7 +57,7 @@
                 ></path>
                 <path fill="#EEE" d="M181.499 50.416h-10.083V60.5h10.083V50.416Z"></path>
                     </svg>
-                    <div class="uppercase text-4xl text-pixl relative">
+                    <div aria-hidden="true" class="hidden md:block uppercase text-4xl text-pixl relative">
                         <!-- Top -->
                         <div class="opacity-20 absolute flex flex-col gap-2 my-2 bottom-full">
                             <div class="opacity-50 flex flex-col gap-2">
@@ -87,10 +87,11 @@
                     </div>
                 </div>
             </div>
-            <!-- right panel -->
-            <div class="w-80 max-w-full pb-16">
-                <h1 class="text-pixl text-3xl">A place for the cool squares.</h1>
-                <div class="flex flex-col gap-3 mt-16 w-68 text-center">
+
+            <!-- Action Buttons -->
+            <div class="sm:w-72 max-w-full pb-16">
+                <h1 class="text-center sm:text-left text-pixl text-3xl">A place for the cool squares.</h1>
+                <div class="flex flex-col gap-3 mt-8 sm:mt-16 sm:w-68 text-center">
                     <a href="#" class="text-pixl bg-pixl-dark/50 hover:bg-pixl-dark/60 active:bg-pixl-dark/75 border border-pixl/50 hover:border-pixl/60 active:border-pixl/70 px-4 py-1.5">Sign in with Google</a>
                     <a href="#" class="text-pixl bg-pixl-dark/50 hover:bg-pixl-dark/60 active:bg-pixl-dark/75 border border-pixl/50 hover:border-pixl/60 active:border-pixl/70 px-4 py-1.5">Sign in with Apple</a>
                     <p>or</p>
@@ -102,13 +103,13 @@
         </div>
     </main>
 
-    <footer class="fixed bottom-0 inset-x-0 pb-3">
+    <footer class="sm:fixed sm:bottom-0 sm:inset-x-0 pb-3 text-center">
         <div class="flex flex-col gap-1.5 items-center p-4 text-pixl">
             <p>All Rights Reserved. Pixl Media For Everyone*</p>
             <p class="opacity-50 text-xs">*except for badgers, they're $$@*holes.</p>
         </div>
         <!-- White noise -->
-         <div class="absolute bottom-0 inset-x-0 h-4 bg-[url(/images/white-noise.gif)]"></div>
+         <div class="fixed bottom-0 inset-x-0 h-4 bg-[url(/images/white-noise.gif)]"></div>
     </footer>
 </body>
 </html>
